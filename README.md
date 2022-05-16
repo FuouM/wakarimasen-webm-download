@@ -6,11 +6,17 @@ pip install tqdm
 pip install bs4
 ```
 
-Step 1: run `YunoRIP.y' with thread link as argument. Eg:
+Step 1: Run `YunoRIP.py` with thread link as argument. Eg:
 ```
 python YunoRIP.py https://archive.wakarimasen.moe/wsg/thread/4192349/
 ```
 
-Step 2: Wait. Files are saved inside `[Thread_num]` folder where the script is ran.
+Or \
+        Run `WideRIP.py` and enter the thread link in the prompt. Eg:
+```
+Enter thread link: https://archive.wakarimasen.moe/wsg/thread/4192349/
+```
+
+Step 2: Wait. Files are saved inside `[Thread_num]` folder where the script is currently running.
 
 Step 3: Enjoy your cum {`[Thread_num.csv]` is created inside current folder
