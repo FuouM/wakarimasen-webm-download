@@ -19,4 +19,7 @@ Step 2: Wait. Files are saved inside `[full_folder_path]\[Thread_num]` (`YunoRIP
 
 Step 3: Enjoy your cum. `[Thread_num.csv]` is created inside aformentioned folder.
 
+
+Current bug: Can't download the OP post.
+
 ![](https://github.com/FuouM/wakarimasen-webm-download/blob/main/running.gif)
