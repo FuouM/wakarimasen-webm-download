@@ -11,18 +11,18 @@ from tqdm.auto import tqdm
 def nameEx(url):
     o = urlparse(url).path
     for i in range(1, len(o)):
-        if o[-i] == "/" and o[-1] != 1:
+        if o[-i] == "/" and i != 1:
             return -(i - 1)
 
 threadlink = sys.argv[1]
-folder = threadlink[-8:-1]
+folder = threadlink[nameEx(threadlink):]
 currentDir = ".\\"
 if len(sys.argv) > 2:
     currentDir = sys.argv[2] + ".\\"
 path = os.path.join(currentDir, folder)
 if os.path.isdir(path) == False:
     os.mkdir(path)
-
+print(path)
 def downloadWEBM(title, url):
     timeStart = timeit.default_timer()
     file_path = os.path.join(path, title)
