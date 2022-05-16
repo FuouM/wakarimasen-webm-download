@@ -24,8 +24,6 @@ if sys.argv[2]:
 currentDir += ".\\" 
 path = os.path.join(currentDir, folder)
 
-
-
 if os.path.isfile(path) == False:
     os.mkdir(path)
 
@@ -43,7 +41,7 @@ def downloadWEBM(title, url):
 timeStartAll = timeit.default_timer()
 request = Request(threadlink, headers={'User-Agent': 'Mozilla/5.0'})
 desuka = urlopen(request).read()
-    
+
 soup = BeautifulSoup(desuka, 'html.parser')
 
 desu = open("{}.csv".format(threadlink[-8:-1]), "w", encoding='utf-8')
