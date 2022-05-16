@@ -18,3 +18,5 @@ Enter thread link: https://archive.wakarimasen.moe/wsg/thread/4192349/
 Step 2: Wait. Files are saved inside `[Thread_num]` folder where the script is currently running.
 
 Step 3: Enjoy your cum. `[Thread_num.csv]` is created inside current folder
+
+![](https://github.com/FuouM/wakarimasen-webm-download/blob/main/running.gif)
