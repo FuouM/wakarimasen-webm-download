@@ -8,10 +8,6 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 from tqdm.auto import tqdm
 
-
-
-
-
 def nameEx(url):
     o = urlparse(url).path
     for i in range(1, len(o)):
@@ -20,8 +16,16 @@ def nameEx(url):
 
 threadlink = sys.argv[1]
 folder = threadlink[-8:-1]
-currentDir = ".\\"
+if sys.argv[2]:
+    currentDir = sys.argv[2]
+    if os.path.isfile(currentDir) == False:
+        os.mkdir(currentDir)
+        
+currentDir += ".\\" 
 path = os.path.join(currentDir, folder)
+
+
+
 if os.path.isfile(path) == False:
     os.mkdir(path)
 
