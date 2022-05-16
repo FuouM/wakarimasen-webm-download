@@ -13,7 +13,7 @@ with open("{}".format(thread), "r", encoding='utf-8') as csvDataFile:
     folder = thread[:-4]
     currentDir = ".\\"
     path = os.path.join(currentDir, folder)
-    if os.path.isfile(path) == True:
+    if os.path.isfile(path) == False:
         os.mkdir(path)
         
     next(csvReader, None)
