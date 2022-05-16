@@ -16,15 +16,11 @@ def nameEx(url):
 
 threadlink = sys.argv[1]
 folder = threadlink[-8:-1]
-if sys.argv[2]:
-    currentDir = sys.argv[2]
-    if os.path.isfile(currentDir) == False:
-        os.mkdir(currentDir)
-        
-currentDir += ".\\" 
+currentDir = ".\\"
+if len(sys.argv) > 2:
+    currentDir = sys.argv[2] + ".\\"
 path = os.path.join(currentDir, folder)
-
-if os.path.isfile(path) == False:
+if os.path.isdir(path) == False:
     os.mkdir(path)
 
 def downloadWEBM(title, url):
@@ -41,7 +37,7 @@ def downloadWEBM(title, url):
 timeStartAll = timeit.default_timer()
 request = Request(threadlink, headers={'User-Agent': 'Mozilla/5.0'})
 desuka = urlopen(request).read()
-
+    
 soup = BeautifulSoup(desuka, 'html.parser')
 
 desu = open("{}.csv".format(threadlink[-8:-1]), "w", encoding='utf-8')
