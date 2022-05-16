@@ -16,6 +16,7 @@ def nameEx(url):
 
 threadlink = sys.argv[1]
 folder = threadlink[nameEx(threadlink):]
+print(folder)
 currentDir = ".\\"
 if len(sys.argv) > 2:
     currentDir = sys.argv[2] + ".\\"
@@ -43,15 +44,18 @@ desuka = urlopen(request).read()
     
 soup = BeautifulSoup(desuka, 'html.parser')
 
-desu = open("{}.csv".format(threadlink[-8:-1]), "w", encoding='utf-8')
+desu = open("{}.csv".format(folder), "w", encoding='utf-8')
 desu.write("{},{},{}\n".format("Name","Link","Filename"))
 
-div = soup.find('div', class_="post_file_controls")
-children = div.findChildren("a" , recursive=False)
-first_post = str(children[-1]).replace("<a class=\"btnr parent\" download=", "").replace(" href", "").replace("\"", "").replace("><i class", "").split("=")
-if first_post[0].find(".webm") != -1:
-    downloadWEBM(first_post[0], first_post[1])
-    desu.write("{},{},{}\n".format(first_post[0], first_post[1], first_post[1][nameEx(first_post[1]):]))
+try:
+    div = soup.find('div', class_="post_file_controls")
+    children = div.findChildren("a" , recursive=False)
+    first_post = str(children[-1]).replace("<a class=\"btnr parent\" download=", "").replace(" href", "").replace("\"", "").replace("><i class", "").split("=")
+    if first_post[0].find(".webm") != -1:
+        downloadWEBM(first_post[0], first_post[1])
+        desu.write("{},{},{}\n".format(first_post[0], first_post[1], first_post[1][nameEx(first_post[1]):]))
+except:
+    pass
     
 for link in soup.find_all('a'):
     file_url = str(link.get('href'))
