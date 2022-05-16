@@ -6,9 +6,9 @@ pip install tqdm
 pip install bs4
 ```
 
-Step 1: Run `YunoRIP.py` with thread link as argument. Eg:
+Step 1: `python YunoRIP.py [thread_link] [full_folder_path]`
 ```
-python YunoRIP.py https://archive.wakarimasen.moe/wsg/thread/4192349/
+python YunoRIP.py https://archive.wakarimasen.moe/wsg/thread/4192349/ "C:\Program Files"
 ```
 
 Or \
