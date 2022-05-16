@@ -17,7 +17,7 @@ Enter thread link: https://archive.wakarimasen.moe/wsg/thread/4192349/
 
 Step 2: Wait. Files are saved inside `[full_folder_path]\[Thread_num]` (`YunoRIP`) or `[current]\[Thread_num]` by default/`WideRIP.py`.
 
-Step 3: Enjoy your cum. `[Thread_num.csv]` is created inside aformentioned folder.
+Step 3: Enjoy your cum. `[Thread_num].csv` is created inside aformentioned folder.
 
 
 ~~Current bug: Can't download the OP post.~~
