@@ -3,6 +3,7 @@ Download webm files from https://archive.wakarimasen.moe/ threads with Python (W
 
 Step 0: Install the required libraries:
 ```
+pip install requests
 pip install tqdm
 pip install bs4
 ```
